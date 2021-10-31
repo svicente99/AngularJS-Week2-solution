@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app='ShoppingListApp'>
+  <head>
+    <title>Shopping List Check Off - Assignment 2 - Johns Hopkins University</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="buy_list.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/app.css">
+    <title>Custom Service Through a Provider - enhanced</title>
+  </head>
+  <body>
+  <div class="container">
+    <h1>Shopping List Check Off</h1>
+    <h3>Assignment 2 - by Sergio Vicente [Single Page Web Applications with AngularJS]</h1>
+    <hr>
+  
+
+    <!-- ToBuy List -->
+    <div class="col-md-5 list" ng-controller='ToBuyController as to_buy'>
+      <h4>Shopping List</h4>
+      <ol>
+        <li ng-repeat="item in to_buy.items">
+          Buy {{ item.quantity }} {{ item.name }} 
+          <button class="btn" ng-click="to_buy.buyItem($index);"><span class="glyphicon glyphicon-ok">add &rarr;</span></button>
+        </li>
+      </ol>
+      <div ng-if="to_buy.sizeOf() == 0" class="emptyMessage">Everything is bought!</div>
+    </div>
+	<div class="col-md-1"></div>
+    <!-- Bought List -->
+    <div class="col-md-5 list" ng-controller='AlreadyBoughtController as bought'>
+      <h4>Bought List</h4>
+      <ol>
+        <li ng-repeat="item in bought.items">
+          {{ item.quantity }} of {{ item.name }}
+          <button ng-click="bought.returnItem($index);">&larr; Return item</button>
+        </li>
+      </ol>
+      <div ng-if="bought.sizeOf() == 0" class="emptyMessage">Nothing bought yet.</div>
+    </div>
+
+  </div>
+  </body>
+</html>
