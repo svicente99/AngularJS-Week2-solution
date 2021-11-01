@@ -34,7 +34,7 @@
       <h4>Bought List</h4>
       <ol>
         <li ng-repeat="item in bought.items">
-          {{ item.quantity }} of {{ item.name }}
+          Bought {{ item.quantity }} {{ item.name }}
           <button ng-click="bought.returnItem($index);">&larr; Return item</button>
         </li>
       </ol>
