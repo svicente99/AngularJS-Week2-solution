@@ -41,3 +41,14 @@ button > span {
   min-height:300px;
   border: solid 1px #6c757d;
 }
+
+#github {
+    position: fixed;
+    height: 50px;
+    background-color: #d0d0d0;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+	padding: 10px 20px;
+}
