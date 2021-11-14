@@ -1,11 +1,11 @@
-# Angular1-Week2-solution
+# AngularJS-Week2-solution
 
 Repository to source code for the <b>Assignment 2</b> solution in <b>Single Page Web Applications with AngularJS</b>.<br>
 Johns Hopkins University - Coursera
 
 You may test this same code online. It's published in Github pages:
 
-https://svicente99.github.io/Angular1-Week2-solution/
+https://svicente99.github.io/AngularJS-Week2-solution/
 
 Instructions for this exercise can be read in:
 
